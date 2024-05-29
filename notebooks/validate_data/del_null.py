@@ -10,7 +10,7 @@ def remove_null_values(file_path: str, columns_to_check: list[str]) -> None:
 
 
 
-file_path: str = '../../data/clean/train_clean.csv'
-columns_to_check: list[str] = ['text', 'text_b']
+file_path: str = '../../data/work_data/train_work.csv'
+columns_to_check: list[str] = ['text', 'text_b', 'label']
 
 remove_null_values(file_path, columns_to_check)
