@@ -12,8 +12,8 @@ def check_null_values(file_path, columns_to_check) -> DataFrame:
 
 
 
-file_path: str = '../../data/clean/test_clean.csv'
-columns_to_check: list[str] = ['text', 'text_b']
+file_path: str = '../../data/clean/train_clean.csv'
+columns_to_check: list[str] = ['text', 'text_b', 'label']
 
 rows_with_nulls: DataFrame = check_null_values(file_path, columns_to_check)
 print(rows_with_nulls)
