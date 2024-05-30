@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
 
-load_dotenv("../dev.env")
+load_dotenv("dev.env")
 
 
 MLFLOW_TRACKING_URI: str = os.getenv('MLFLOW_TRACKING_URI')
