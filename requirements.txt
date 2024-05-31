@@ -1,1 +1,11 @@
-# do provide specific versions of your dependencies
+# --extra-index-url https://download.pytorch.org/whl/cu121
+# torch==2.3.0+cu121
+# torchvision
+# torchaudio
+torch
+python-dotenv
+notebook
+fastparquet
+transformers
+mlflow==2.13.0
+scikit-learn==1.2.2
