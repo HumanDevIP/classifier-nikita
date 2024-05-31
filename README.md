@@ -1,9 +1,9 @@
 # Experiment title
 Fine-tune a BERT transformer model for the task of binary classification 
 
-The corresponding <a href:=https://www.notion.so/Plan-of-Experiment-PoE-template-efed4153dd7849c5979e9abb00293ec0>Plan of Experiment is provided here</a>.
+The corresponding <a href:=https://www.notion.so/Early-baseline-for-claim-cited-paragraph-classification-on-PatentMatch-Nikita-6454b2e8d23b4a1ba42cc7296090c14e>Plan of Experiment is provided here</a>.
 \
-The <a href:=https://www.notion.so/Experiment-Report-Template-450e66b444c74039bd1beda4f6c226a9>Full Report</a> describing the effort is also available.
+The <a href:=https://www.notion.so/Report-Nikita-Early-Baseline-PatentMatch-Paragraph-Classification-0ca2d8bae638438cb5ea67add321cbf6>Full Report</a> describing the effort is also available.
 
 
 
@@ -86,4 +86,4 @@ The dataset is provided in a .parquet file format and contains the following key
 
 
 ## Credentials
-All experiments are logged in MLflow. Please fill in the credentials in the configuration file.
+All experiments are logged in MLflow. Please fill in the credentials in the .dev file.
