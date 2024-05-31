@@ -1,15 +1,31 @@
 import pandas as pd
+from pandas import DataFrame
 from transformers import BertTokenizer
 
 
 
 def check_and_remove_token_overruns(max_token_limit, origin_path, output_path):
-    df = pd.read_csv(origin_path)
+    """
+    Identify and remove rows with token overruns in a CSV file.
+
+    This function reads a CSV file, calculates the total number of tokens in specified text columns using the BERT tokenizer,
+    removes rows that exceed the maximum token limit, and saves the cleaned data back to a CSV file.
+
+    Arguments:
+    - max_token_limit (int): The maximum number of tokens allowed per row.
+    - origin_path (str): The path to the input CSV file.
+    - output_path (str): The path where the cleaned CSV file will be saved.
+
+    Return Value:
+    - tuple: A tuple containing the number of rows with token overruns and the number of deleted rows.
+    """
+    
+    df: DataFrame = pd.read_csv(origin_path)
     
     tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
     
     # Function to calculate the total number of tokens
-    def calculate_tokens(row):
+    def calculate_tokens(row) -> int:
         tokens_text = tokenizer.tokenize(row['text'])
         tokens_text_b = tokenizer.tokenize(row['text_b'])
         

@@ -4,6 +4,20 @@ import pandas as pd
 
 
 def convert_parquet_to_csv(parquet_path: str, csv_path: str) -> None:
+    """
+    Convert a Parquet file to a CSV file.
+
+    This function reads a Parquet file from the specified path, converts it to a Pandas DataFrame,
+    and then saves it as a CSV file to the specified path.
+
+    Arguments:
+    - parquet_path (str): The path to the input Parquet file.
+    - csv_path (str): The path where the resulting CSV file will be saved.
+
+    Return Value:
+    - None
+    """
+    
     try:
         pf: ParquetFile = ParquetFile(parquet_path)
         data_frame: pd.DataFrame = pf.to_pandas()
